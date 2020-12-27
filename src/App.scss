@@ -1,3 +1,140 @@
-html, body {
-  height: 100%;
+$lightback: #DEE1DD;
+$inactive: #C4CDC1;
+$active: #6D9197;
+$slider-track: #99AEAD;
+$slider-thumb: #2F575D;
+$dark: #28363D;
+
+body {
+  align-items: center;
+  background-color: $lightback;
+  color: $dark;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+#metronome {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.Circles {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+
+  &_beat {
+    background-color: $inactive;
+    border-radius: 50%;
+    height: 20px;
+    margin: 20px;
+    width: 20px;
+    
+    &:first-child {
+      height: 30px;
+      width: 30px;
+    }
+
+    &--plays {
+      background-color: $active;
+
+      &.-active {
+        background-color: $dark;
+      }
+    }
   }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 20px 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    background: $slider-track;
+    height: 5px;  
+  }
+
+  &::-moz-range-track {
+    background: $slider-track;
+    height: 5px;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: $slider-thumb;
+    border-radius: 50%;
+    height: 15px;
+    margin-top: -5px;
+    width: 15px;
+  }
+   
+   &::-moz-range-thumb {
+    background: $slider-thumb;
+    border-radius: 50%;
+    height: 15px;
+    margin-top: -5px;
+    width: 15px;
+  }
+}
+
+.TimeSignature {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  &__label {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &__divider {
+      border: 0;
+      border-top: 1px solid $dark;
+      width: 100%;
+    }
+  }
+}
+
+.Bpm {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.PlayButton {
+  align-items: center;
+  background-color: $slider-track;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 50px;
+
+  &:hover {
+    background-color: $active;
+
+    svg {
+      fill: $lightback;
+    }
+  }
+
+  svg {
+    fill: $dark;
+    font-size: 3em;
+    padding-left: 3px;
+  }
+}
