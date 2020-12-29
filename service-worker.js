@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pwa-metronome/precache-manifest.9419e2dc5081bf27a5bfbda72d89b7d3.js"
+  "/pwa-metronome/precache-manifest.94485384c90b3bbe708150343a878507.js"
 );
 
 self.addEventListener('message', (event) => {
