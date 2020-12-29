@@ -14,6 +14,7 @@ const App = () => {
     <Router>
       <Route exact path="/" component={Metronome}/>
       <Route path="/help" component={Help}/>
+      <Metronome />
       <ul>
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/help"><span>Help</span></Link></li>
