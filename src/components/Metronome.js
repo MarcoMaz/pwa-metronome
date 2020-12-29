@@ -12,7 +12,6 @@ let barLength
 let circles
 let oldActiveIndex
 
-
 const Metronome = () => {
   const [ isPlaying, setIsPlaying ] = useState( false )
   const [ bpm, setBpm ] = useState( 100 )
